@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ROOMIFY - MANAJEMEN HOSPTALITY TERINTEGRASI</title>
+
+    <meta property="og:title" content="ROOMIFY - BY GREENLAND">
+    <meta property="og:description" content="Webapp Manajemen Hospitality Terintegrasi, Praktis & Profesional.">
+    <meta property="og:type" content="website">
+    
+    <meta property="og:url" content="https://github.com/greenlandagrofarm/landbusiness_roomify.trial/">
+    
+    <meta property="og:image" content="https://i.ibb.co.com/5xLDkHdX/roomify.png">
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            /* Background layar aplikasi utama putih */
+            background-color: #ffffff;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1;
+        }
+        /* Loader dengan teks Biru Navy Modern */
+        #loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* Warna Biru Navy (Sangat cocok untuk tema hospitality/ROOMIFY) */
+            color: #1e3a8a;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: 0.1em;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loader">Memuat ROOMIFY Mohon Tunggu...</div>
+    
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbxl5NEIrS5u6wyuV7F61sNce2Z5J7ZlQhYpYf4zdgHy9i0KhS5GVYsTEM76sDbes5IyCg/exec" 
+        onload="document.getElementById('loader').style.display='none';">
+    </iframe>
+
+</body>
+</html>
