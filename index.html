@@ -2,29 +2,37 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>ROOMIFY - MANAJEMEN HOSPTALITY TERINTEGRASI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOMIFY - MANAJEMEN HOSPITALITY TERINTEGRASI</title>
 
     <meta property="og:title" content="ROOMIFY - BY GREENLAND">
     <meta property="og:description" content="Webapp Manajemen Hospitality Terintegrasi, Praktis & Profesional.">
     <meta property="og:type" content="website">
-    
     <meta property="og:url" content="https://github.com/greenlandagrofarm/landbusiness_roomify.trial/">
-    
     <meta property="og:image" content="https://i.ibb.co.com/5xLDkHdX/roomify.png">
-    
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+
     <style>
-        body, html {
+        /* Mengunci ukuran layar penuh 100% tanpa scrollbar ganda */
+        html, body {
             margin: 0;
             padding: 0;
             height: 100%;
             width: 100%;
             overflow: hidden;
-            /* Background layar aplikasi utama putih */
             background-color: #ffffff;
+            -webkit-text-size-adjust: 100%; /* Mencegah auto-zoom teks di iOS */
         }
+
+        /* Container Pembungkus agar Iframe Murni Responsif di Layar HP & PC */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
         iframe {
             position: absolute;
             top: 0;
@@ -32,33 +40,42 @@
             width: 100%;
             height: 100%;
             border: none;
-            z-index: 1;
+            margin: 0;
+            padding: 0;
         }
-        /* Loader dengan teks Biru Navy Modern */
+
+        /* Loader dengan Gaya Biru Navy Premium ROOMIFY */
         #loader {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            /* Warna Biru Navy (Sangat cocok untuk tema hospitality/ROOMIFY) */
             color: #1e3a8a;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             text-align: center;
             font-weight: 900; 
             text-transform: uppercase; 
             letter-spacing: 0.1em;
+            font-size: 14px;
             z-index: 2;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <div id="loader">Memuat ROOMIFY Mohon Tunggu..Refresh Jika Koneksi Terputus.</div>
+    <div id="loader">Memuat ROOMIFY Mohon Tunggu.. Refresh Jika Koneksi Terputus.</div>
     
-    <iframe 
-        src="https://script.google.com/macros/s/AKfycbzZZH-yj9_XgIuxijrzcqg2Uk7xbfVkk9cK1OfD9uiyRVkegJfZcfUXOZE1t0dAE5AU_A/exec" 
-        onload="document.getElementById('loader').style.display='none';">
-    </iframe>
+    <div class="iframe-container">
+        <iframe 
+            src="https://script.google.com/macros/s/AKfycbzWTVDT5BWbxwAJ7aWzh6YQlhZ2vlrmKNpkTvMDxb9Mj898O5PKcN-JNiff8OIibQCkVQ/exec" 
+            onload="document.getElementById('loader').style.display='none';"
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
+            allow="geolocation; microphone; camera; midi; encrypted-media; clipboard-write;">
+        </iframe>
+    </div>
 
 </body>
 </html>
